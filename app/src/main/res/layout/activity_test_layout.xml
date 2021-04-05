@@ -81,7 +81,8 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="30dp"
                 android:textAllCaps="false"
-                android:background="@drawable/mybutton"
+                app:backgroundTint="@null"
+                android:background="@drawable/custom_selector"
                 android:layout_weight="1" />
 
             <Button
@@ -96,7 +97,8 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="30dp"
                 android:textAllCaps="false"
-                android:background="@drawable/mybutton"
+                app:backgroundTint="@null"
+                android:background="@drawable/custom_selector"
                 android:layout_weight="1" />
 
             <Button
@@ -111,7 +113,8 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="30dp"
                 android:textAllCaps="false"
-                android:background="@drawable/mybutton"
+                app:backgroundTint="@null"
+                android:background="@drawable/custom_selector"
                 android:layout_weight="1" />
         </LinearLayout>
 

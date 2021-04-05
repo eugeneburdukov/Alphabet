@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.alphabet",
+  "applicationId": "com.alphabet.alphabet",
   "variantName": "processReleaseResources",
   "elements": [
     {
