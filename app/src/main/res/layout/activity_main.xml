@@ -12,22 +12,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/comfortaa"
             android:gravity="center"
             android:text="@string/activity_main_header"
             android:textColor="#08538F"
             android:textSize="30sp" />
 
-
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             android:layout_weight="6"
             android:src="@drawable/alphabet" />
 
@@ -44,7 +44,8 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@drawable/custom_button"
+            android:background="@drawable/custom_selector"
+            android:textSize="16dp"
             android:text="@string/activity_main_learn_characters"
             android:textColor="#FFF"
             app:backgroundTint="@null" />
@@ -62,7 +63,8 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@drawable/custom_button"
+            android:background="@drawable/custom_selector"
+            android:textSize="16dp"
             android:text="@string/activity_main_test"
             app:backgroundTint="@null" />
 
