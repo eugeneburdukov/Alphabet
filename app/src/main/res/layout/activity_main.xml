@@ -34,30 +34,37 @@
 
         <Button
             android:id="@+id/button11"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="0dp"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:layout_gravity="center_horizontal|center"
-            android:text="@string/activity_main_learn_characters" />
+            android:background="@drawable/custom_button"
+            android:text="@string/activity_main_learn_characters"
+            android:textColor="#FFF"
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/button12"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="300dp"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center_horizontal|center"
-            android:text="@string/activity_main_test" />
-
-        <Button
-            android:id="@+id/button13"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:layout_gravity="center_horizontal|center"
-            android:text="@string/activity_main_about_program" />
+            android:background="@drawable/custom_button"
+            android:text="@string/activity_main_test"
+            app:backgroundTint="@null" />
 
     </LinearLayout>
 

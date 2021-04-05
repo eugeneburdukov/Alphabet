@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Alphabet">
+        <activity android:name=".Button_test"></activity>
         <activity
-            android:name="com.alphabet.alphabet.AboutActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity
-            android:name="com.alphabet.alphabet.TestActivity"
+            android:name=".AboutActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name="com.alphabet.alphabet.StudyActivity"
+            android:name=".TestActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name="com.alphabet.alphabet.MainActivity">
+        <activity
+            android:name=".StudyActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

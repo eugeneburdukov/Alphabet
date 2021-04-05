@@ -12,7 +12,6 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button button11;
     Button button12;
-    Button button13;
     MediaPlayer mediaPlayer;
     ImageView imageView1;
 
@@ -26,8 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button11.setOnClickListener(this);
         button12 = findViewById(R.id.button12);
         button12.setOnClickListener(this);
-        button13 = findViewById(R.id.button13);
-        button13.setOnClickListener(this);
         imageView1 = findViewById(R.id.imageView1);
         imageView1.setOnClickListener(this);
 
@@ -49,11 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button12:
                 mediaPlayer.stop();
                 intent = new Intent(MainActivity.this, TestActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.button13:
-                mediaPlayer.stop();
-                intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
                 break;
             case R.id.imageView1:
