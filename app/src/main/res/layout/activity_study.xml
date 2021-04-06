@@ -5,7 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".StudyActivityNext">
+    tools:context=".StudyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/hometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:drawableLeft="@drawable/home"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/comfortaa"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:text="На главную"
+            android:textSize="18dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,11 +34,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageViewLetter21"
+            android:id="@+id/imageViewLetternextgen1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
-            app:srcCompat="@drawable/abcnew" />
+            android:layout_weight="7"
+            app:srcCompat="@drawable/anew" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +47,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/buttonnext1"
+                android:id="@+id/buttonPrevious"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -46,7 +66,7 @@
                 app:backgroundTint="@null" />
 
             <Button
-                android:id="@+id/buttonnext3"
+                android:id="@+id/buttonNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -67,7 +87,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonnext2"
+        android:id="@+id/buttonPlay"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
@@ -76,4 +96,6 @@
         android:background="@drawable/custom_selector"
         android:drawableLeft="@drawable/play"
         app:backgroundTint="@null" />
+
+
 </FrameLayout>

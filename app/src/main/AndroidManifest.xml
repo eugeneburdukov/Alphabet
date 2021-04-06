@@ -9,19 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Alphabet">
-        <activity android:name=".StudyActivityNewGen"></activity>
-        <activity android:name=".StudyActivityNext" />
-        <activity android:name=".newstudy_activity" />
-        <activity android:name=".buttons_activity" />
-        <activity android:name=".Button_test" />
+        <activity android:name=".StudyActivity"></activity>
         <activity
             android:name=".AboutActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".TestActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".StudyActivity"
+            android:name=".ExerciseActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

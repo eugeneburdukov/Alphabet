@@ -5,20 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.widget.TextView;
 
-public class StudyActivity extends AppCompatActivity implements View.OnClickListener {
-    Button button21;
-    Button button22;
-    Button button23;
-    ImageView imageView;
+public class StudyActivity extends AppCompatActivity implements View.OnClickListener{
+    Button buttonPrevious;
+    Button buttonPlay;
+    Button buttonNext;
+    TextView textHome;
+    ImageView imageLetter;
     int index;
-    int[] images = new int[]{R.drawable.a, R.drawable.b, R.drawable.c,
+    int[] images = new int[]{R.drawable.anew, R.drawable.bnew, R.drawable.cnew,
             R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.h,
             R.drawable.i, R.drawable.j, R.drawable.k, R.drawable.l, R.drawable.m,
             R.drawable.n, R.drawable.o, R.drawable.p, R.drawable.q, R.drawable.r,
@@ -32,17 +31,19 @@ public class StudyActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_study_layout);
+        setContentView(R.layout.activity_study);
 
-        button21 = findViewById(R.id.button21);
-        button21.setOnClickListener(this);
-        button22 = findViewById(R.id.button22);
-        button22.setOnClickListener(this);
-        button23 = findViewById(R.id.button23);
-        button23.setOnClickListener(this);
-        imageView = findViewById(R.id.imageViewLetter21);
         index = 0;
-        imageView.setImageResource(images[index]);
+        buttonPrevious = findViewById(R.id.buttonPrevious);
+        buttonPrevious.setOnClickListener(this);
+        buttonPlay = findViewById(R.id.buttonPlay);
+        buttonPlay.setOnClickListener(this);
+        buttonNext = findViewById(R.id.buttonNext);
+        buttonNext.setOnClickListener(this);
+        imageLetter = findViewById(R.id.imageViewLetternextgen1);
+        imageLetter.setImageResource(images[index]);
+        textHome = findViewById(R.id.hometext);
+        textHome.setOnClickListener(this);
     }
 
     @Override
@@ -50,36 +51,41 @@ public class StudyActivity extends AppCompatActivity implements View.OnClickList
         Intent intent;
 
         switch (v.getId()) {
-            case R.id.button21:
+            case R.id.buttonPrevious:
                 if (index > 0) {
                     index--;
-                    imageView.setImageResource(images[index]);
+                    imageLetter.setImageResource(images[index]);
                 } else {
-                    button21.setEnabled(false);
+                    buttonPrevious.setEnabled(false);
                 }
-                if (!button23.isEnabled()) {
-                    button23.setEnabled(true);
+                if (!buttonNext.isEnabled()) {
+                    buttonNext.setEnabled(true);
                 }
                 break;
-            case R.id.button22:
+            case R.id.buttonPlay:
                 MediaPlayer mediaPlayer = new MediaPlayer();
                 mediaPlayer = MediaPlayer.create(this, sounds[index]);
                 mediaPlayer.start();
-                Toast toast = Toast.makeText(getApplicationContext(),
+                /*Toast toast = Toast.makeText(getApplicationContext(),
                         "Жми кнопку 'ЗВУК', повторяй за мной!", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();
+                toast.show();*/
                 break;
-            case R.id.button23:
+            case R.id.buttonNext:
                 if (index < 25) {
                     index++;
-                    imageView.setImageResource(images[index]);
+                    imageLetter.setImageResource(images[index]);
                 } else {
-                    button23.setEnabled(false);
+                    buttonNext.setEnabled(false);
                 }
-                if (!button21.isEnabled()) {
-                    button21.setEnabled(true);
+                if (!buttonPrevious.isEnabled()) {
+                    buttonPrevious.setEnabled(true);
                 }
+                break;
+            case R.id.hometext:
+                intent = new Intent(StudyActivity.this, MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
     }
 }

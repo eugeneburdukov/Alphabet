@@ -42,10 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                mediaPlayer.stop();
                 intent = new Intent(MainActivity.this, StudyActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
             case R.id.button12:
 //                mediaPlayer.stop();
-                intent = new Intent(MainActivity.this, StudyActivityNewGen.class);
+                intent = new Intent(MainActivity.this, ExerciseActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             /*    break;

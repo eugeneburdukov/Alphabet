@@ -2,7 +2,6 @@ package com.alphabet.alphabet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class TestActivity extends AppCompatActivity implements View.OnClickListener {
+public class ExerciseActivity extends AppCompatActivity implements View.OnClickListener {
     Button button31;
     Button button32;
     Button button33;
@@ -44,7 +43,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_layout);
+        setContentView(R.layout.activity_exercise_layout);
 
         button31 = findViewById(R.id.button31);
         button31.setOnClickListener(this);
