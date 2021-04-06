@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView1 = findViewById(R.id.imageView1);
         imageView1.setOnClickListener(this);
 
-        mediaPlayer = new MediaPlayer();
+        /*mediaPlayer = new MediaPlayer();
         mediaPlayer = MediaPlayer.create(this, R.raw.abcsong);
-        mediaPlayer.start();
+        mediaPlayer.start();*/
     }
 
     @Override
@@ -39,22 +39,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()) {
             case R.id.button11:
-                mediaPlayer.stop();
+//                mediaPlayer.stop();
                 intent = new Intent(MainActivity.this, StudyActivity.class);
                 startActivity(intent);
                 break;
             case R.id.button12:
-                mediaPlayer.stop();
-                intent = new Intent(MainActivity.this, TestActivity.class);
+//                mediaPlayer.stop();
+                intent = new Intent(MainActivity.this, StudyActivityNewGen.class);
                 startActivity(intent);
-                break;
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            /*    break;
             case R.id.imageView1:
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.stop();
                 } else {
                     mediaPlayer = MediaPlayer.create(this, R.raw.abcsong);
                     mediaPlayer.start();
-                }
+                }*/
         }
     }
 }

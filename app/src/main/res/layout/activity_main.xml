@@ -4,74 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".buttons_activity"
+    android:background="@color/background">
 
     <LinearLayout
-        android:id="@+id/db1_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="184dp"
             android:fontFamily="@font/comfortaa"
             android:gravity="center"
             android:text="@string/activity_main_header"
-            android:textColor="#08538F"
-            android:textSize="30sp" />
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="4"
-            android:src="@drawable/logo" />
+            android:layout_height="218dp"
+            app:srcCompat="@drawable/logo" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="500dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button11"
-            android:layout_width="300dp"
-            android:layout_height="0dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"
             android:background="@drawable/custom_selector"
             android:fontFamily="@font/comfortaa"
             android:text="@string/activity_main_learn_characters"
-            android:textColor="#FFF"
             android:textAllCaps="false"
+            android:textColor="#FFF"
             android:textSize="16dp"
-            app:backgroundTint="@null" />
+            app:backgroundTint="@null"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/button12"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="300dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal|center"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
             android:background="@drawable/custom_selector"
             android:fontFamily="@font/comfortaa"
             android:text="@string/activity_main_test"
             android:textAllCaps="false"
+            android:textColor="#FFF"
             android:textSize="16dp"
             app:backgroundTint="@null" />
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

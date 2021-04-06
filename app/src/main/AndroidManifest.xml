@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Alphabet">
-        <activity android:name=".Button_test"></activity>
+        <activity android:name=".StudyActivityNewGen"></activity>
+        <activity android:name=".StudyActivityNext" />
+        <activity android:name=".newstudy_activity" />
+        <activity android:name=".buttons_activity" />
+        <activity android:name=".Button_test" />
         <activity
             android:name=".AboutActivity"
             android:parentActivityName=".MainActivity" />
