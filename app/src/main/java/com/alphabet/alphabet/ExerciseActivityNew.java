@@ -3,10 +3,13 @@ package com.alphabet.alphabet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -65,7 +68,6 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
 
         textViewHome = findViewById(R.id.textViewHome);
         textViewHome.setOnClickListener(this);
-
 
         correctAnswer = 0;
         incorrectAnswer = 0;
@@ -152,6 +154,7 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
         List<Integer> letters = new ArrayList<>();
 
         int index;
+
         do {
             index = random.nextInt(26);
         } while (letters.contains(index));

@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button buttonLearning;
@@ -15,6 +19,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonAbout;
     MediaPlayer mediaPlayer;
     ImageView imageView1;
+    Toast toastSuccess;
+    LayoutInflater layoutInflater;
+    View layout;
 
 
     @Override
@@ -24,12 +31,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttonLearning = findViewById(R.id.button11);
         buttonLearning.setOnClickListener(this);
-        buttonExercising = findViewById(R.id.button12);
+        buttonExercising = findViewById(R.id.button13);
         buttonExercising.setOnClickListener(this);
-        buttonAbout = findViewById(R.id.button13);
-        buttonAbout.setOnClickListener(this);
         imageView1 = findViewById(R.id.imageView1);
         imageView1.setOnClickListener(this);
+
+        buttonAbout = findViewById(R.id.button12);
+
+        layoutInflater = getLayoutInflater();
+        layout = layoutInflater.inflate(R.layout.toast_success_layout, (ViewGroup) findViewById(R.id.toast_layout));
+
+        toastSuccess = new Toast(getApplicationContext());
+
+        toastSuccess.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toastSuccess.setDuration(Toast.LENGTH_SHORT);
+        toastSuccess.setView(layout);
+        buttonAbout.setOnClickListener(this);
 
         /*mediaPlayer = new MediaPlayer();
         mediaPlayer = MediaPlayer.create(this, R.raw.abcsong);
@@ -49,14 +66,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button13:
 //                mediaPlayer.stop();
-               intent = new Intent(MainActivity.this, ExerciseActivityNew.class);
+                intent = new Intent(MainActivity.this, ExerciseActivityNew.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
             case R.id.button12:
-                intent = new Intent(MainActivity.this, AboutActivity.class);
+                /*intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);*/
+                toastSuccess.show();
                 break;
             /*    break;
             case R.id.imageView1:
@@ -67,5 +85,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mediaPlayer.start();
                 }*/
         }
+    }
+
+    public void getToast() {
+        buttonAbout = findViewById(R.id.button12);
+
+        layoutInflater = getLayoutInflater();
+        layout = layoutInflater.inflate(R.layout.toast_success_layout, (ViewGroup) findViewById(R.id.toast_layout));
+
+        toastSuccess = new Toast(getApplicationContext());
+
+        toastSuccess.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toastSuccess.setDuration(Toast.LENGTH_SHORT);
+        toastSuccess.setView(layout);
+        buttonAbout.setOnClickListener(this);
     }
 }
