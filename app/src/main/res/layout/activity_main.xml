@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".buttons_activity"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,23 +54,37 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/custom_selector"
             android:fontFamily="@font/comfortaa"
             android:text="@string/activity_main_learn_characters"
             android:textAllCaps="false"
             android:textColor="#FFF"
             android:textSize="16dp"
-            app:backgroundTint="@null"
-            android:layout_marginBottom="10dp"/>
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/button12"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/custom_selector"
             android:fontFamily="@font/comfortaa"
-            android:text="@string/activity_main_test"
+            android:text="@string/activity_main_exercise"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="16dp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:background="@drawable/custom_selector"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/activity_main_exercise_new"
             android:textAllCaps="false"
             android:textColor="#FFF"
             android:textSize="16dp"

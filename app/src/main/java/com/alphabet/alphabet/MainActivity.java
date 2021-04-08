@@ -10,8 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button button11;
-    Button button12;
+    Button buttonLearning;
+    Button buttonExercising;
+    Button buttonAbout;
     MediaPlayer mediaPlayer;
     ImageView imageView1;
 
@@ -21,10 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button11 = findViewById(R.id.button11);
-        button11.setOnClickListener(this);
-        button12 = findViewById(R.id.button12);
-        button12.setOnClickListener(this);
+        buttonLearning = findViewById(R.id.button11);
+        buttonLearning.setOnClickListener(this);
+        buttonExercising = findViewById(R.id.button12);
+        buttonExercising.setOnClickListener(this);
+        buttonAbout = findViewById(R.id.button13);
+        buttonAbout.setOnClickListener(this);
         imageView1 = findViewById(R.id.imageView1);
         imageView1.setOnClickListener(this);
 
@@ -40,15 +43,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.button11:
 //                mediaPlayer.stop();
-                intent = new Intent(MainActivity.this, StudyActivity.class);
+                intent = new Intent(MainActivity.this, ExerciseActivityNew.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
             case R.id.button12:
 //                mediaPlayer.stop();
-                intent = new Intent(MainActivity.this, ExerciseActivity.class);
+/*                intent = new Intent(MainActivity.this, ExerciseActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);*/
+                break;
+            case R.id.button13:
+                intent = new Intent(MainActivity.this, TestDesignActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                break;
             /*    break;
             case R.id.imageView1:
                 if (mediaPlayer.isPlaying()) {

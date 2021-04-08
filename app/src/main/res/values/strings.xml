@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Alphabet</string>
     <string name="activity_main_header">Страна знаний</string>
-    <string name="activity_main_about_program">О программе</string>
     <string name="activity_main_learn_characters">Изучение букв</string>
-    <string name="activity_main_test">Тест</string>
+    <string name="activity_main_exercise">Тест</string>
+    <string name="activity_main_exercise_new">Тест New</string>
     <string name="button">button</string>
 </resources>

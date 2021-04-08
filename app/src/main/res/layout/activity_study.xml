@@ -22,9 +22,9 @@
             android:drawablePadding="15dp"
             android:fontFamily="@font/comfortaa"
             android:maxLines="2"
-            android:textStyle="bold"
             android:text="На главную"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
