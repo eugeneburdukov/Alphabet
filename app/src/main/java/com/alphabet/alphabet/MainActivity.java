@@ -43,18 +43,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.button11:
 //                mediaPlayer.stop();
-                intent = new Intent(MainActivity.this, ExerciseActivityNew.class);
+                intent = new Intent(MainActivity.this, StudyActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                break;
+            case R.id.button13:
+//                mediaPlayer.stop();
+               intent = new Intent(MainActivity.this, ExerciseActivityNew.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
             case R.id.button12:
-//                mediaPlayer.stop();
-/*                intent = new Intent(MainActivity.this, ExerciseActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fadein, R.anim.fadeout);*/
-                break;
-            case R.id.button13:
-                intent = new Intent(MainActivity.this, TestDesignActivity.class);
+                intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;

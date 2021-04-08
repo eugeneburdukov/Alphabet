@@ -2,7 +2,7 @@
     <string name="app_name">Alphabet</string>
     <string name="activity_main_header">Страна знаний</string>
     <string name="activity_main_learn_characters">Изучение букв</string>
-    <string name="activity_main_exercise">Тест</string>
-    <string name="activity_main_exercise_new">Тест New</string>
+    <string name="activity_main_exercise">Упражнение</string>
+    <string name="activity_main_about">Про авторов</string>
     <string name="button">button</string>
 </resources>
