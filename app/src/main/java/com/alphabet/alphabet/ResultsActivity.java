@@ -24,14 +24,10 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
 
         textViewHome = findViewById(R.id.textViewHome);
         textViewHome.setOnClickListener(this);
-
         imageViewStar = findViewById(R.id.imageViewStar);
         textViewResultCor = findViewById(R.id.textViewResultCor);
-
-
         Intent mIntent = getIntent();
         int intValue1 = mIntent.getIntExtra("correctAnswer", 0);
-
         String score = "Score " + intValue1 + " /  26";
         SpannableString spannableString = new SpannableString(score);
         StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);

@@ -66,10 +66,6 @@ public class StudyActivity extends AppCompatActivity implements View.OnClickList
                 MediaPlayer mediaPlayer = new MediaPlayer();
                 mediaPlayer = MediaPlayer.create(this, sounds[index]);
                 mediaPlayer.start();
-                /*Toast toast = Toast.makeText(getApplicationContext(),
-                        "Жми кнопку 'ЗВУК', повторяй за мной!", Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();*/
                 break;
             case R.id.buttonNext:
                 if (index < 25) {

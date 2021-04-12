@@ -56,19 +56,14 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
         buttonTwo.setOnClickListener(this);
         buttonThree = findViewById(R.id.buttonThree);
         buttonThree.setOnClickListener(this);
-
         imageViewLetter = findViewById(R.id.imageViewLetter);
         imageViewLetter.setOnClickListener(this);
-
         textViewCorrect = findViewById(R.id.textViewCorrect);
         textViewCorrect.setText("0");
-
         textViewIncorrect = findViewById(R.id.textViewIncorrect);
         textViewIncorrect.setText("0");
-
         textViewHome = findViewById(R.id.textViewHome);
         textViewHome.setOnClickListener(this);
-
         correctAnswer = 0;
         incorrectAnswer = 0;
         mediaPlayer = new MediaPlayer();

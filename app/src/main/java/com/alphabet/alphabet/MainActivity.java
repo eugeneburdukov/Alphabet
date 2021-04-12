@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonLearning;
     Button buttonExercising;
     Button buttonAbout;
-    MediaPlayer mediaPlayer;
     ImageView imageView1;
     Toast toastSuccess;
     LayoutInflater layoutInflater;
@@ -35,22 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonExercising.setOnClickListener(this);
         imageView1 = findViewById(R.id.imageView1);
         imageView1.setOnClickListener(this);
-
         buttonAbout = findViewById(R.id.button12);
-
         layoutInflater = getLayoutInflater();
         layout = layoutInflater.inflate(R.layout.toast_success_layout, (ViewGroup) findViewById(R.id.toast_layout));
-
         toastSuccess = new Toast(getApplicationContext());
-
         toastSuccess.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toastSuccess.setDuration(Toast.LENGTH_SHORT);
         toastSuccess.setView(layout);
         buttonAbout.setOnClickListener(this);
-
-        /*mediaPlayer = new MediaPlayer();
-        mediaPlayer = MediaPlayer.create(this, R.raw.abcsong);
-        mediaPlayer.start();*/
     }
 
     @Override
@@ -59,31 +50,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()) {
             case R.id.button11:
-//                mediaPlayer.stop();
                 intent = new Intent(MainActivity.this, StudyActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
             case R.id.button13:
-//                mediaPlayer.stop();
                 intent = new Intent(MainActivity.this, ExerciseActivityNew.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
             case R.id.button12:
-                /*intent = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fadein, R.anim.fadeout);*/
                 toastSuccess.show();
-                break;
-            /*    break;
-            case R.id.imageView1:
-                if (mediaPlayer.isPlaying()) {
-                    mediaPlayer.stop();
-                } else {
-                    mediaPlayer = MediaPlayer.create(this, R.raw.abcsong);
-                    mediaPlayer.start();
-                }*/
         }
     }
 
