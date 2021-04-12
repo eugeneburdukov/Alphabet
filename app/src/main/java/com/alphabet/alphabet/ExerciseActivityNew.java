@@ -78,32 +78,6 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        if ((correctAnswer + incorrectAnswer) == 26) {
-            if (correctAnswer == 26) {
-                toast = Toast.makeText(getApplicationContext(),
-                        "Поздравляю! Вы выучили алфавит!", Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();
-                mediaPlayer = MediaPlayer.create(this, R.raw.clapping);
-                mediaPlayer.start();
-            } else {
-                toast = Toast.makeText(getApplicationContext(),
-                        "Предлагаю вернуться к изучению алфавита!", Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();
-                mediaPlayer = MediaPlayer.create(this, R.raw.sad);
-                mediaPlayer.start();
-            }
-            switch (v.getId()) {
-                case R.id.textViewHome:
-                    intent = new Intent(ExerciseActivityNew.this, MainActivity.class);
-                    startActivity(intent);
-                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-                    break;
-            }
-            return;
-        }
-
         switch (v.getId()) {
             case R.id.buttonOne:
                 if (position == 1) {
@@ -143,6 +117,14 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
                 startActivity(intent);
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
+        }
+        if ((correctAnswer + incorrectAnswer) == 5) {
+            Intent result = new Intent(ExerciseActivityNew.this, ResultsActivity.class);
+            result.putExtra("correctAnswer", correctAnswer);
+            result.putExtra("incorrectAnswer", incorrectAnswer);
+            startActivity(result);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            return;
         }
     }
 
@@ -194,8 +176,6 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
                     buttonTwo.setText(abc[index + 2]);
                 }
         }
-
         imageViewLetter.setImageResource(images[index]);
-
     }
 }
