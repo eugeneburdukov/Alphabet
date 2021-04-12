@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExerciseActivityNew">
+    android:background="@color/background"
+    tools:context=".StudyActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +14,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textViewHome"
+            android:id="@+id/hometext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="55dp"
@@ -24,44 +25,6 @@
             android:text="На главную"
             android:textSize="18dp"
             android:textStyle="bold" />
-
-        <LinearLayout
-            android:id="@+id/testSection"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewCorrectText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center|right"
-                android:text="Верно: " />
-
-            <TextView
-                android:id="@+id/textViewCorrect"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="test" />
-
-            <TextView
-                android:id="@+id/textViewIncorrectText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center|right"
-                android:text="Неверно: " />
-
-            <TextView
-                android:id="@+id/textViewIncorrect"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="test" />
-
-        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -71,10 +34,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageViewLetter"
+            android:id="@+id/imageViewLetternextgen1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="5"
+            android:layout_height="0dp"
+            android:layout_weight="7"
             app:srcCompat="@drawable/anew" />
 
         <LinearLayout
@@ -84,7 +47,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/buttonOne"
+                android:id="@+id/buttonPrevious"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -96,13 +59,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/custom_selector"
                 android:fontFamily="@font/comfortaa"
+                android:text="Предыдущая"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
                 android:textSize="16dp"
                 app:backgroundTint="@null" />
 
             <Button
-                android:id="@+id/buttonTwo"
+                android:id="@+id/buttonNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -114,28 +78,24 @@
                 android:layout_weight="1"
                 android:background="@drawable/custom_selector"
                 android:fontFamily="@font/comfortaa"
-                android:textAllCaps="false"
-                android:textColor="#FFF"
-                android:textSize="16dp"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/buttonThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/custom_selector"
-                android:fontFamily="@font/comfortaa"
+                android:text="Слудующая"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
                 android:textSize="16dp"
                 app:backgroundTint="@null" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="-85dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/custom_selector"
+        android:drawableLeft="@drawable/play"
+        app:backgroundTint="@null" />
+
+
 </FrameLayout>

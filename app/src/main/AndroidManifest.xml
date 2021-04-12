@@ -10,14 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alphabet">
         <activity android:name=".ResultsActivity"></activity>
-        <activity android:name=".TestDesignActivity" />
         <activity android:name=".ExerciseActivityNew" />
         <activity android:name=".StudyActivity" />
         <activity
             android:name=".AboutActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".ExerciseActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
