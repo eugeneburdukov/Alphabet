@@ -16,6 +16,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
     ImageView imageViewStar;
     TextView textViewResultCor;
     TextView textViewHome;
+    Intent mIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         textViewHome.setOnClickListener(this);
         imageViewStar = findViewById(R.id.imageViewStar);
         textViewResultCor = findViewById(R.id.textViewResultCor);
-        Intent mIntent = getIntent();
+        mIntent = getIntent();
         int intValue1 = mIntent.getIntExtra("correctAnswer", 0);
         String score = "Score " + intValue1 + " /  26";
         SpannableString spannableString = new SpannableString(score);
