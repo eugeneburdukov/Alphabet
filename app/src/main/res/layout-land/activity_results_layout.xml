@@ -11,7 +11,7 @@
         android:id="@+id/textViewResultCor"
         android:layout_width="130dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="136dp"
+        android:layout_marginEnd="300dp"
         android:fontFamily="@font/comfortaa"
         android:text="Score 0 /  26"
         android:textAllCaps="false"
@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintVertical_bias="0.714" />
 
     <ImageView
         android:id="@+id/imageViewStar"
@@ -38,7 +38,7 @@
         android:id="@+id/textViewHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="96dp"
         android:drawableLeft="@drawable/home"
         android:drawablePadding="15dp"
