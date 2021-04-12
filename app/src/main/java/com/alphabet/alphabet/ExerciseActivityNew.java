@@ -108,7 +108,7 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
         }
-        if ((correctAnswer + incorrectAnswer) == 5) {
+        if ((correctAnswer + incorrectAnswer) == 26) {
             Intent result = new Intent(ExerciseActivityNew.this, ResultsActivity.class);
             result.putExtra("correctAnswer", correctAnswer);
             result.putExtra("incorrectAnswer", incorrectAnswer);
