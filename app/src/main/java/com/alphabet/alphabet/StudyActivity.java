@@ -23,6 +23,7 @@ public class StudyActivity extends AppCompatActivity implements View.OnClickList
             R.drawable.n, R.drawable.o, R.drawable.p, R.drawable.q, R.drawable.r,
             R.drawable.s, R.drawable.t, R.drawable.u, R.drawable.v, R.drawable.w,
             R.drawable.x, R.drawable.y, R.drawable.z};
+    
     int[] sounds = new int[]{R.raw.a, R.raw.b, R.raw.c, R.raw.d, R.raw.e, R.raw.f,
             R.raw.g, R.raw.h, R.raw.i, R.raw.j, R.raw.k, R.raw.l, R.raw.m, R.raw.n,
             R.raw.o, R.raw.p, R.raw.q, R.raw.r, R.raw.s, R.raw.t, R.raw.u, R.raw.v,
