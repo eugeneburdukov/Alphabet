@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView1 = findViewById(R.id.imageView1);
         imageView1.setOnClickListener(this);
         buttonAbout = findViewById(R.id.button12);
-        layoutInflater = getLayoutInflater();
+        /*layoutInflater = getLayoutInflater();
         layout = layoutInflater.inflate(R.layout.toast_success_layout, (ViewGroup) findViewById(R.id.toast_layout));
         toastSuccess = new Toast(getApplicationContext());
         toastSuccess.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toastSuccess.setDuration(Toast.LENGTH_SHORT);
-        toastSuccess.setView(layout);
+        toastSuccess.setView(layout);*/
         buttonAbout.setOnClickListener(this);
     }
 
@@ -59,21 +59,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
             case R.id.button12:
-                toastSuccess.show();
+                intent = new Intent(MainActivity.this, AboutActivityContraint.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
     }
 
-    public void getToast() {
-        buttonAbout = findViewById(R.id.button12);
-
-        layoutInflater = getLayoutInflater();
-        layout = layoutInflater.inflate(R.layout.toast_success_layout, (ViewGroup) findViewById(R.id.toast_layout));
-
-        toastSuccess = new Toast(getApplicationContext());
-
-        toastSuccess.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        toastSuccess.setDuration(Toast.LENGTH_SHORT);
-        toastSuccess.setView(layout);
-        buttonAbout.setOnClickListener(this);
-    }
+//    public void getToast() {
+//        buttonAbout = findViewById(R.id.button12);
+//
+//        layoutInflater = getLayoutInflater();
+//        layout = layoutInflater.inflate(R.layout.toast_success_layout, (ViewGroup) findViewById(R.id.toast_layout));
+//
+//        toastSuccess = new Toast(getApplicationContext());
+//
+//        toastSuccess.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+//        toastSuccess.setDuration(Toast.LENGTH_SHORT);
+//        toastSuccess.setView(layout);
+//        buttonAbout.setOnClickListener(this);
+//    }
 }

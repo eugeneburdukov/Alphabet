@@ -43,7 +43,7 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exercise_activity_new);
+        setContentView(R.layout.activity_exercise_constraint);
 
         buttonOne = findViewById(R.id.buttonOne);
         buttonOne.setOnClickListener(this);

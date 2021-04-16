@@ -17,7 +17,7 @@ public class StudyActivity extends AppCompatActivity implements View.OnClickList
     TextView textHome;
     ImageView imageLetter;
     int index;
-    int[] images = new int[]{R.drawable.anew, R.drawable.bnew, R.drawable.cnew,
+    int[] images = new int[]{R.drawable.anoshadow, R.drawable.bnoshadow, R.drawable.cnoshadow,
             R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.h,
             R.drawable.i, R.drawable.j, R.drawable.k, R.drawable.l, R.drawable.m,
             R.drawable.n, R.drawable.o, R.drawable.p, R.drawable.q, R.drawable.r,
@@ -31,7 +31,7 @@ public class StudyActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_study);
+        setContentView(R.layout.activity_study_constraint);
 
         index = 0;
         buttonPrevious = findViewById(R.id.buttonPrevious);
