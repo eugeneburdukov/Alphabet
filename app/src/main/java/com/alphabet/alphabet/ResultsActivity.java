@@ -9,6 +9,8 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.StyleSpan;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
     TextView textViewResultCor;
     TextView textViewHome;
     Intent mIntent;
+    Animation animationStar, animationResultText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +32,19 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         textViewResultCor = findViewById(R.id.textViewResultCor);
         mIntent = getIntent();
         int intValue1 = mIntent.getIntExtra("correctAnswer", 0);
-        String score = "Score " + intValue1 + " /  26";
+        String score = "Score " + intValue1 + " /  10";
         SpannableString spannableString = new SpannableString(score);
         StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
         spannableString.setSpan(boldSpan, 6, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         textViewResultCor.setText(spannableString);
+        animationStar = AnimationUtils.loadAnimation(this, R.anim.animate_stars_result);
+        imageViewStar.setAnimation(animationStar);
+        animationStar = AnimationUtils.loadAnimation(this, R.anim.animate_stars_result);
+        imageViewStar.setAnimation(animationStar);
+
+        textViewResultCor.setAnimation(animationResultText);
+        animationResultText = AnimationUtils.loadAnimation(this, R.anim.animate_stars_result);
+        textViewResultCor.setAnimation(animationResultText);
     }
 
     @Override
