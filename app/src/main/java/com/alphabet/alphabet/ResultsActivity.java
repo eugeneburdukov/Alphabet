@@ -14,12 +14,15 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class ResultsActivity extends AppCompatActivity implements View.OnClickListener {
     ImageView imageViewStar;
     TextView textViewResultCor;
     TextView textViewHome;
     Intent mIntent;
     Animation animationStar, animationResultText;
+    LottieAnimationView lottieAnimationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,10 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         textViewResultCor.setAnimation(animationResultText);
         animationResultText = AnimationUtils.loadAnimation(this, R.anim.animate_stars_result);
         textViewResultCor.setAnimation(animationResultText);
+
+        lottieAnimationView = findViewById(R.id.animationView);
+        lottieAnimationView.animate().setDuration(300);
+        lottieAnimationView.setRepeatCount(0);
     }
 
     @Override
