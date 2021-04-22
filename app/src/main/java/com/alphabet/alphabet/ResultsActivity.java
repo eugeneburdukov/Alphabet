@@ -35,13 +35,12 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         textViewResultCor = findViewById(R.id.textViewResultCor);
         mIntent = getIntent();
         int intValue1 = mIntent.getIntExtra("correctAnswer", 0);
-        String score = "Score " + intValue1 + " /  10";
+        int intValue2 = mIntent.getIntExtra("incorrectAnswer", 0);
+        String score = "Score " + intValue1 + " /  " + " " + (intValue1 + intValue2);
         SpannableString spannableString = new SpannableString(score);
         StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
-        spannableString.setSpan(boldSpan, 6, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(boldSpan, 6, 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         textViewResultCor.setText(spannableString);
-        animationStar = AnimationUtils.loadAnimation(this, R.anim.animate_stars_result);
-        imageViewStar.setAnimation(animationStar);
         animationStar = AnimationUtils.loadAnimation(this, R.anim.animate_stars_result);
         imageViewStar.setAnimation(animationStar);
 
@@ -50,7 +49,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         textViewResultCor.setAnimation(animationResultText);
 
         lottieAnimationView = findViewById(R.id.animationView);
-        lottieAnimationView.animate().setDuration(300);
+        lottieAnimationView.animate();
         lottieAnimationView.setRepeatCount(0);
     }
 

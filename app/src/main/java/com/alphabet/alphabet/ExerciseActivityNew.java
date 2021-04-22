@@ -9,23 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class ExerciseActivityNew extends AppCompatActivity implements View.OnClickListener {
-    Button buttonOne;
-    Button buttonTwo;
-    Button buttonThree;
+    Button buttonOne, buttonTwo, buttonThree;
+    TextView textViewCorrect, textViewIncorrect, textViewHome;
+    int position, correctAnswer, incorrectAnswer;
     ImageView imageViewLetter;
-    TextView textViewCorrect;
-    TextView textViewIncorrect;
-    TextView textViewHome;
-    int position;
-    int correctAnswer;
-    int incorrectAnswer;
-    Toast toast;
     MediaPlayer mediaPlayer;
     Intent intent;
 
@@ -108,7 +100,7 @@ public class ExerciseActivityNew extends AppCompatActivity implements View.OnCli
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 break;
         }
-        if ((correctAnswer + incorrectAnswer) == 5) {
+        if ((correctAnswer + incorrectAnswer) == 10) {
             Intent result = new Intent(ExerciseActivityNew.this, ResultsActivity.class);
             result.putExtra("correctAnswer", correctAnswer);
             result.putExtra("incorrectAnswer", incorrectAnswer);

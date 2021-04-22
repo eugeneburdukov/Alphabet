@@ -11,9 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class StudyActivity extends AppCompatActivity implements View.OnClickListener{
-    Button buttonPrevious;
-    Button buttonPlay;
-    Button buttonNext;
+    Button buttonPrevious, buttonPlay, buttonNext;
     TextView textHome;
     ImageView imageLetter;
     int index;

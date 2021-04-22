@@ -12,21 +12,19 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button buttonLearning;
-    Button buttonExercising;
-    Button buttonAbout;
-    ImageView imageView1;
-    Toast toastSuccess;
-    LayoutInflater layoutInflater;
-    View layout;
+import com.airbnb.lottie.LottieAnimationView;
 
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button buttonLearning, buttonExercising, buttonAbout;
+    ImageView imageView1;
+    LottieAnimationView lottieAnimationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        lottieAnimationView = findViewById(R.id.clock);
         buttonLearning = findViewById(R.id.button11);
         buttonLearning.setOnClickListener(this);
         buttonExercising = findViewById(R.id.button13);
